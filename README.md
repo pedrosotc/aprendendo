@@ -7,8 +7,11 @@ para isso;
 Para que seus comites sejam padronizados dar uma olhada em  
 https://www.conventionalcommits.org/en/v1.0.0/
 
+
+
 		git init
 Apenas inicia o projeto
+		
 		
 		
 		git remote -v
