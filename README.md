@@ -6,23 +6,18 @@ Não esquecer de criar um gitignore, você pode usar o "www.gitignore.io"
 para isso;
 Para que seus comites sejam padronizados dar uma olhada em  
 https://www.conventionalcommits.org/en/v1.0.0/
-
-
-
+&nbsp;&nbsp;
 		git init
 Apenas inicia o projeto
-		
-		
+&nbsp;&nbsp;
 		
 		git remote -v
 Serve para ver todos os repositórios remotos disponiveis na maquina;
-
-
+&nbsp;&nbsp;
 
 		git remote add origin "url do repositório"
 adiciona o repositório remoto na minha maquina
-
-
+&nbsp;&nbsp;
 
 		git clone "url do repositório"
 já faz o git init, serve para se o projeto já existe no git
