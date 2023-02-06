@@ -7,6 +7,15 @@ para isso;
 Para que seus comites sejam padronizados dar uma olhada em  
 https://www.conventionalcommits.org/en/v1.0.0/
 
+    gitGraph
+       commit
+       commit
+       branch develop
+       commit
+       commit
+       commit
+
+
 &nbsp;
 
 		git init
