@@ -137,25 +137,18 @@ stash da sua lista;
 
 ###Sequence Diagram
                     
-```seq
-Untracked -> Staged (Tracked): git add .
-Staged (Tracked) ->> Unmodified (Tracked) : git commit
-Unmodified (Tracked) --> Untracked : git remove file
-Unmodified (Tracked) --> Modifield (Tracked) : edit 
-Modifield (Tracked) -> Staged (Tracked) : Stage the file 
+```
+sequenceDiagram
+	participant Ut as Untracked
+	participant S as Staged
+	participant Unm as Unmodified (Tracked)
+	participant M as Modifield (Tracked)
+	Ut -> S (Tracked): git add .
+	S (Tracked) ->> Unmodified (Tracked) : git commit
+	Unm --> Ut : git remove file
+	Unm --> M : edit 
+	M -> S (Tracked) : Stage the file 
 ```
 ###End
 
-'''mermaid
-sequenceDiagram
-    Alice->>John: Hello John, how are you?
-    John-->>Alice: Great!
-    Alice-)John: See you later!
-'''
-'''mermaid
-sequenceDiagram
-    participant A as Alice
-    participant J as John
-    A->>J: Hello John, how are you?
-    J->>A: Great!
-'''
+	
