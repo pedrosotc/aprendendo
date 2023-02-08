@@ -148,7 +148,7 @@ Modifield (Tracked) -> Staged (Tracked) : Stage the file
 
 
 ###Sequence Diagram
-                    
+```mermaid           
 ```seq
 Andrew->China: Says Hello 
 Note right of China: China thinks\nabout it 
