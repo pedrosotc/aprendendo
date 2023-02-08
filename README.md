@@ -8,9 +8,8 @@ Para que seus comites sejam padronizados dar uma olhada em
 https://www.conventionalcommits.org/en/v1.0.0/
 
 ###Sequence Diagram
-
-```
-seq
+                    
+```seq
 Untracked->Staged (Tracked): git add .
 Staged (Tracked)->>Unmodified (Tracked):git commit
 Unmodified (Tracked)->>Untracked: git remove file
@@ -147,4 +146,14 @@ stash da sua lista;
 
 ## UML diagrams
 
-You can render UML diagrams using [Mermaid](https://mermaidjs.github.io/). For example, this will produce a sequence diagram:
+
+###Sequence Diagram
+                    
+```seq
+Untracked->Staged (Tracked): git add .
+Staged (Tracked)->>Unmodified (Tracked):git commit
+Unmodified (Tracked)->>Untracked: git remove file
+Unmodified (Tracked)-->Modifield (Tracked): edit 
+Modifield (Tracked)->Staged (Tracked):Stage the file 
+```
+###End
