@@ -7,6 +7,32 @@ para isso;
 Para que seus comites sejam padronizados dar uma olhada em  
 https://www.conventionalcommits.org/en/v1.0.0/
 
+###
+&nbsp;
+**Untracked:** são aqueles que o Git não está rastreando, ou seja, são arquivos novos ou existentes na pasta de trabalho, mas que ainda não foram adicionados ao repositório Git.
+**Modified (modificado):** o arquivo foi alterado na pasta de trabalho, mas ainda não foi adicionado ao index (staging area).
+**Staged (estagiado):** o arquivo foi adicionado ao index e está pronto para ser incluído no próximo commit;
+**Unstaged (não estagiado):**o arquivo foi alterado na pasta de trabalho depois de ter sido adicionado ao index, mas ainda não foi adicionado novamente ao index;
+
+
+                    
+```mermaid
+sequenceDiagram
+	participant Ut as Untracked
+	participant S as Staged (Tracked)
+	participant Unm as Unmodified (Tracked)
+	participant M as Modifield (Tracked)
+
+	Ut -> S: git add .
+	S ->> Unm : git commit
+	Unm --> Ut : git remove file
+	Unm --> M : edit 
+	M -> S : Stage the file 
+```
+
+	
+
+
 &nbsp;
 
 		git init
@@ -131,25 +157,3 @@ Serve para voltar seu código para a "unstaget area" e depois remove o seu
 stash da sua lista;
 
 &nbsp;
-
-## UML diagrams
-
-
-###Sequence Diagram
-                    
-```mermaid
-sequenceDiagram
-	participant Ut as Untracked
-	participant S as Staged (Tracked)
-	participant Unm as Unmodified (Tracked)
-	participant M as Modifield (Tracked)
-
-	Ut -> S: git add .
-	S ->> Unm : git commit
-	Unm --> Ut : git remove file
-	Unm --> M : edit 
-	M -> S : Stage the file 
-```
-###End
-
-	
