@@ -6,77 +6,16 @@ Não esquecer de criar um gitignore, você pode usar o "www.gitignore.io"
 para isso;
 Para que seus comites sejam padronizados dar uma olhada em  
 https://www.conventionalcommits.org/en/v1.0.0/
-```mermaid
-    %%{init: { 'logLevel': 'debug', 'theme': 'base' } }%%
-      gitGraph
-        commit id: "1" tag: "1.0.0"
-        commit id: "2"
-
-        checkout main
-        branch release
-        checkout release
-        commit id: "3"
-
-        branch develop
-        checkout develop
-        commit id: "4"
-
-        branch feature1
-        checkout feature1
-        commit id: "5"
-        commit id: "6"
-        merge develop
-        
-        checkout develop
-        branch feature2
-        commit id: "7"
-        merge develop
-
-        checkout develop
-        branch feature3
-        commit id: "8"
-
-        checkout release
-        commit id: "9"
-
-        checkout develop
-        merge release
-
-        branch feature4
-        commit id: "10"
-
-        checkout feature3
-        commit id: "11"
-        merge develop
-
-        checkout feature4
-        commit id: "13"
-        
-        checkout main
-        commit id: "14"
-
-        checkout release
-        commit id: "15"
-        merge main
-
-        checkout main
-        branch hotfix1
-        checkout hotfix1
-        commit id: "16"
-        merge main
-
-        checkout main
-        commit id: "17"
-
-        checkout release
-        commit id: "18"
-        merge main
-        checkout develop
-        merge release
-        commit id: "19"
-
-        checkout feature4
-        merge develop
+###Sequence Diagram
+                    
+```seq
+Untracked->Staged (Tracked): git add .
+Staged (Tracked)->>Unmodified (Tracked):git commit
+Unmodified (Tracked)->>Untracked: git remove file
+Unmodified (Tracked)-->Modifield (Tracked): edit 
+Modifield (Tracked)->Staged (Tracked):Stage the file 
+```
+###End
 
 
 &nbsp;
