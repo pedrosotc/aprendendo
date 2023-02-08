@@ -6,7 +6,8 @@ Para que seus comites sejam padronizados dar uma olhada em   https://www.convent
 
 ###Indice
 
-[1. Estados do Git](MDs/EstadosDoGit.md)&nbsp;
+[1. Estados do Git](MDs/EstadosDoGit.md)
+&nbsp;
 [2. Comandos Basicos do git](MDs/comandosBasicos.md)
 
                  
