@@ -146,14 +146,16 @@ Modifield (Tracked) -> Staged (Tracked) : Stage the file
 ```
 ###End
 
-
-###Sequence Diagram
-```mermaid           
-seq
-Andrew->China: Says Hello 
-Note right of China: China thinks\nabout it 
-China-->Andrew: How are you? 
-Andrew->>China: I am good thanks!
-```
-
-###End
+'''mermaid
+sequenceDiagram
+    Alice->>John: Hello John, how are you?
+    John-->>Alice: Great!
+    Alice-)John: See you later!
+'''
+'''mermaid
+sequenceDiagram
+    participant A as Alice
+    participant J as John
+    A->>J: Hello John, how are you?
+    J->>A: Great!
+'''
