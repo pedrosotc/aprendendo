@@ -137,17 +137,18 @@ stash da sua lista;
 
 ###Sequence Diagram
                     
-```
+```mermaid
 sequenceDiagram
 	participant Ut as Untracked
-	participant S as Staged
+	participant S as Staged (Tracked)
 	participant Unm as Unmodified (Tracked)
 	participant M as Modifield (Tracked)
-	Ut -> S (Tracked): git add .
-	S (Tracked) ->> Unmodified (Tracked) : git commit
+
+	Ut -> S: git add .
+	S ->> Unm : git commit
 	Unm --> Ut : git remove file
 	Unm --> M : edit 
-	M -> S (Tracked) : Stage the file 
+	M -> S : Stage the file 
 ```
 ###End
 
