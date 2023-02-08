@@ -7,18 +7,6 @@ para isso;
 Para que seus comites sejam padronizados dar uma olhada em  
 https://www.conventionalcommits.org/en/v1.0.0/
 
-###Sequence Diagram
-                    
-```seq
-Untracked->Staged (Tracked): git add .
-Staged (Tracked)->>Unmodified (Tracked):git commit
-Unmodified (Tracked)->>Untracked: git remove file
-Unmodified (Tracked)-->Modifield (Tracked): edit 
-Modifield (Tracked)->Staged (Tracked):Stage the file 
-```
-###End
-
-
 &nbsp;
 
 		git init
@@ -169,4 +157,3 @@ Andrew->>China: I am good thanks!
 ```
 
 ###End
-
