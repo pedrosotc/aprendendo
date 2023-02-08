@@ -8,9 +8,7 @@ Para que seus comites sejam padronizados dar uma olhada em
 https://www.conventionalcommits.org/en/v1.0.0/
 
 ###
-
 &nbsp;
-
 **Untracked:** são aqueles que o Git não está rastreando, ou seja, são arquivos novos ou existentes na pasta de trabalho, mas que ainda não foram adicionados ao repositório Git.
 
 &nbsp;
