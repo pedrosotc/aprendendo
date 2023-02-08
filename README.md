@@ -8,8 +8,9 @@ Para que seus comites sejam padronizados dar uma olhada em
 https://www.conventionalcommits.org/en/v1.0.0/
 
 ###Sequence Diagram
-                    
-```seq
+
+```
+seq
 Untracked->Staged (Tracked): git add .
 Staged (Tracked)->>Unmodified (Tracked):git commit
 Unmodified (Tracked)->>Untracked: git remove file
