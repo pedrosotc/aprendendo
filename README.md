@@ -152,7 +152,7 @@ stash da sua lista;
 ```seq
 Untracked->Staged (Tracked): git add .
 Staged (Tracked)->>Unmodified (Tracked):git commit
-Unmodified (Tracked)->>Untracked: git remove file
+Unmodified (Tracked)-->Untracked: git remove file
 Unmodified (Tracked)-->Modifield (Tracked): edit 
 Modifield (Tracked)->Staged (Tracked):Stage the file 
 ```
