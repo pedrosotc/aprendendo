@@ -1,0 +1,44 @@
+{
+    "helloWorld": "Olá Mundo",
+    "title": "em Português",
+  
+  
+    "concatenedText": "Meu nome é {completeName}.",
+  
+    "textWithPlaceHolders": "Meu nome é {lastName}, {firstName} {lastName}",
+    "@textWithPlaceHolders":{
+      "placeHolders":{
+        "firstName":{},
+        "lastName":{}
+      }
+    },
+    "pageNotificationsCount": "{howMany, plural, =0{Você não Possui menssagens} one{Você tem 1 mensagem} other {Você tem {howMany} mensagens}}",
+    
+    "gender": "o meu genero é {sex, select, male {ele} female {ela} other {them}}.",
+  
+    "pageHomeBalance" : "Your balance is {amount} on {date}",
+    "@pageHomeBalance" : {
+        "placeholders": {
+            "amount": {
+                "type": "double",
+                "format": "currency",
+                "example": "$1000,00",
+                "description": "Account balance",
+                "optionalParameters": {
+                    "decimalDigits": 2,
+                    "name": "USD",
+                    "symbol": "$",
+                    "customPattern": "¤#0,00"
+                }
+            },
+            "date": {
+                "type": "DateTime",
+                "format": "yMd",
+                "example": "11/10/2021",
+                "description": "Balance date"
+            }
+        }
+    }
+  
+  
+}
