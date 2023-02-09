@@ -121,3 +121,149 @@ Serve para voltar seu código para a "unstaget area" e depois remove o seu
 stash da sua lista;
 
 &nbsp;
+
+    git log --oneline
+mostra cada registro do log em uma linha, é mais clean;
+
+&nbsp;
+
+		git log --pretty=format:'%C(Blue)%h %C(red)%d %C(white)%s - %C(cyan)%cn, %C(green)%cr'
+formatação do log, esse comando é um ótimo candidato para o alias;
+'%H'  mostra a hash
+'%h'  mostra a hash reduzida
+'%d'  qual é a branch
+'%s'  menssagem do comite
+'%cn' mostra o nome da pessoa que fez o comite
+'%cr' data do comite
+'%C(Blue)'
+
+&nbsp;
+
+		git tag 1.0 -m "release 1.0"
+
+&nbsp;
+
+		git tag -a "nome da tag" -m "texto descritivo da tag" [hash sem nenhum simbolo]
+como adicionar uma tag
+
+&nbsp;
+
+		git push origin master --follow-tags
+envia apenas as tags;
+também ótimo cadidato a alias;
+
+&nbsp;
+
+		git tag
+Serve para pontos do sistema, como marcos, versões etc;
+Esse comando mostra todas as tags criadas;
+Exitem dois tipos: anotada e lightwait;
+
+&nbsp;
+
+		git tag 1.0 -m "release 1.0"
+Um exemplo de tag anotada;
+
+&nbsp;
+
+		git tag -a "0.1.0.beta" -m "release 0.1.0.beta" "hash do commit"
+Por padrão apenas tags anotadas vão para o repositório remoto;
+
+&nbsp;
+
+		git push origin master --tags
+Envia todas as tags, inclusive as lightwiates, não é recomendado;
+
+&nbsp;
+
+		git push origin master --follow-tags
+Envia todas as tags que são anotadas para o servidor;
+É possível colocar o comando --follow-tags como padrão, pra isso é só abri o git config igual os alias e colocar a opção:
+[push] followTags = true
+
+&nbsp;
+
+		git git tag -d "nome da tag"
+Elimina a tag local;
+
+&nbsp;
+
+		git push --delete origin "nome da tag"
+antes de usar esse comando e apagar a tag do servidor vc deve apagar a tag local;
+
+&nbsp;
+
+		git reset "arquivo"
+Na staged area ele faz com que o arquivo volte para o workspace (basicamente o contrário do add) ou sem arquivo serve como oposto do add.;
+&nbsp;
+
+		git reset HEAD~1
+Igual ao git reset "arquivo", com exceção de que ele volta o numero de commites de acordo com o numero escrito depois do ~;
+
+&nbsp;
+
+		git reset "código do hash" --soft
+Se estiver no repositório ele retira o commit do repositório e envia para o staged area;
+
+&nbsp;
+
+		git reset "código do hash" --mixed
+Se estiver no repositório ele retira o commit do repositório e envia para um estágio antes do staged area, pode ser o untracked ou modified;
+O mixed é o defaul no git;
+
+&nbsp;
+
+		git reset "código do hash" --hard
+Se estiver no repositório ele retira o commit do repositório e envia para o untracked area;
+
+&nbsp;
+
+		git revert "código do hash"
+Mantem os commites anteriores e gera mais um commit com o mesmo conteudo do hash do comitt que esta declarado no código;
+Costuma dar conflito se vc já tiver modificado o mesmo documento, caso contrário gera o novo hash com o resultdo que que foi revertido automaticamente;
+
+&nbsp;
+
+		git checkout "arquivo"
+O arquivo editado no unstaged area (modifield) perderá a modificação;
+
+&nbsp;
+
+		git checkout "nome da branch"
+Troca a branch em que você esta;
+
+&nbsp;
+
+		git checkout -b "nome da branch"
+Pode ser outra branch que não seja a master, esse foi um exemplo;
+primeiro o comando esta entrando na master e de la esta criando uma branch;
+
+&nbsp;
+
+		git checkout "Nome de um commit ou a tag"
+cria uma branch temporaria (se vc sair sem criar uma branch pra ela a alise feita se perde)
+
+&nbsp;
+
+		git clean
+Serve somente para remover arquivos que estão como untracked (apenas na sua maquina, ainda não é conhecido pelo git);
+
+&nbsp;
+
+		git clean -n
+Mostra primeiro quais arquivos serão removidos;
+
+&nbsp;
+
+		git clean -n -f
+Mostra quias arquivos serão removidos e força a remoção;
+
+&nbsp;
+
+		git rm "Nome do arquivo"
+Remove um arquivo tracked, ele primeiro apaga do untracked (da sua maquina) e espera sua confirmação pelo commit;
+
+&nbsp;
+
+		git rm "Nome do arquivo"c--cached
+Apaga arquivos mesmo que já estejam no repositório;
