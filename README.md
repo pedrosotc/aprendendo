@@ -11,7 +11,6 @@ Para que seus comites sejam padronizados dar uma olhada em   https://www.convent
 [2. Comandos Basicos do git e diferenças entre reset, revert, RM Clean e Checkout](MDs/comandosBasicos.md)
 &nbsp;
 
-                 
 	
 
 
